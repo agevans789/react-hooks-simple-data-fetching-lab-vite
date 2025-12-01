@@ -18,9 +18,11 @@ function App() {
     useEffect(() => {
         handleSetDog();
     }, []);
+    // create button to fetch new dog
   return (
     <div className='app'>
         {loading ? <p>Loading...</p> : <img src={dog} alt="A Random Dog" />}
+        <button onClick={handleSetDog}>Fetch New Dog</button>
     </div>
   );
 }
